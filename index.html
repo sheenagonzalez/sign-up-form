@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Form</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <div class="logo-container">
+        <img class="logo-img" src="images/odin-logo.png" alt="Odin logo"/>
+        <span class="logo-name">Odin</span>
+      </div>
+      <p class="image-attr">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
+    </div>
+    <form class="form">
+      <div class="form-section">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <div class="form-section form-section--main">
+        <p>Let's do this!</p>
+        <div class="form-row">
+          <span class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name"/>
+          </span>
+          <span class="form-group">
+          <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name"/>
+          </span>
+        </div>
+        <div class="form-row">
+          <span class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"/>
+          </span>
+          <span class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone"/>
+          </span>
+        </div>
+        <div class="form-row">
+          <span class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+          </span>
+          <span class="form-group">
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" name="confirm-password"/>
+          </span>
+        </div>
+      </div>
+      <div class="form-section">
+        <button class="submit-btn" type="submit">Create Account</button>
+        <p class="login-prompt">Already have an account? <a class="login-link">Log in</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
