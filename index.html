@@ -15,7 +15,7 @@
       </div>
       <p class="image-attr">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
     </div>
-    <form class="form">
+    <form class="form" action="https://httpbin.org/post" method="post">
       <div class="form-section">
         <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
         <p>You <em>know</em> you want to.</p>
@@ -25,21 +25,21 @@
         <div class="form-row">
           <span class="form-group">
             <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first-name"/>
+            <input type="text" id="first-name" name="first-name" placeholder="John"/>
           </span>
           <span class="form-group">
           <label for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last-name"/>
+            <input type="text" id="last-name" name="last-name" placeholder="Smith"/>
           </span>
         </div>
         <div class="form-row">
           <span class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email"/>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com"/>
           </span>
           <span class="form-group">
             <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone"/>
+            <input type="tel" id="phone" name="phone" placeholder="(XXX)XXX-XXXX"/>
           </span>
         </div>
         <div class="form-row">
@@ -55,7 +55,7 @@
       </div>
       <div class="form-section">
         <button class="submit-btn" type="submit">Create Account</button>
-        <p class="login-prompt">Already have an account? <a class="login-link">Log in</a></p>
+        <p class="login-prompt">Already have an account? <a class="login-link" href="#">Log in</a></p>
       </div>
     </form>
   </div>
