@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign-up Form</title>
   <link rel="stylesheet" href="style.css"/>
-  <script src="script.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript" defer></script>
 </head>
 <body>
   <div class="container">
@@ -26,36 +26,52 @@
         <div class="form-row">
           <span class="form-group">
             <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first-name" placeholder="John"/>
+            <input type="text" id="first-name" name="first-name" placeholder="John" required/>
           </span>
           <span class="form-group">
           <label for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last-name" placeholder="Smith"/>
+            <input type="text" id="last-name" name="last-name" placeholder="Smith" required/>
           </span>
         </div>
         <div class="form-row">
           <span class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com"/>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required/>
           </span>
           <span class="form-group">
             <label for="phone">Phone number</label>
             <input type="tel" id="phone" name="phone" placeholder="(XXX)XXX-XXXX"/>
           </span>
         </div>
-        <div class="form-row">
-          <span class="form-group">
+        <div class="form-row form-row--single">
+          <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password"/>
-          </span>
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder=" " required/>
+            <button type="button" class="toggle-pwd-btn" id="togglePwdBtn" onclick="togglePwd(this)">
+              <span class="pwd-visibility show-pwd" id="showPwd"><img src="icons/visibility.svg"> Show</span>
+              <span class="pwd-visibility hide-pwd" id="hidePwd"><img src="icons/visibility-off.svg"> Hide</span>
+            </button>
+          </div>
+          <ul class="message" id="pwd-requirements">
+            <li id="letter" class="req-item">A lowercase letter</li>
+            <li id="capital" class="req-item">A capital (uppercase) letter</li>
+            <li id="number" class="req-item">A number</li>
+            <li id="length" class="req-item">Minimum 8 characters</li>
+          </ul>
+        </div>
+        <div class="form-row form-row--single">
           <span class="form-group">
             <label for="confirm-password">Confirm password</label>
-            <input type="password" id="confirm-password" name="confirm-password"/>
+            <input type="password" class="pwd-input" id="confirm-password" name="confirm-password" placeholder=" " required/>
+            <button type="button" class="toggle-pwd-btn" id="toggleConfirmPwdBtn" onclick="togglePwd(this)">
+              <span class="pwd-visibility show-pwd" id="showConfirmPwd"><img src="icons/visibility.svg"> Show</span>
+              <span class="pwd-visibility hide-pwd" id="hideConfirmPwd"><img src="icons/visibility-off.svg"> Hide</span>
+            </button>
           </span>
         </div>
       </div>
       <div class="form-section">
-        <button class="submit-btn" type="submit">Create Account</button>
+        <button id="submit-btn" type="submit">Create Account</button>
         <p class="login-prompt">Already have an account? <a class="login-link" href="#">Log in</a></p>
       </div>
     </form>
